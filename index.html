@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SGP CALCULATOR</title>
+        <meta name="viewport" content="widthdivice-width,initial-scal=1.0"/>
+
+        <style>
+
+            input[type=text]{
+                transition: 2s;
+                border-radius: 3px;
+                width: 200px;
+                height: 20px;
+                box-shadow: 0 0 20px;
+            }
+            input[type=text]:focus{
+                border-color: dodgerblue;
+                box-shadow: 0 0 8px 0 blue;
+            }
+            body{
+                align-items: center;
+                background-image: url("images/pexels-george-milton-7034285.jpg");
+                overflow: hidden;
+                background-size: 100%;
+            
+                font-weight: 200;
+            }
+            .crids{
+                display: block;
+                margin-bottom: 100px;
+                size: 20px;
+            }
+            .crids  input{
+                margin-top: 10px;
+            }
+            .three input{
+                margin-top: 10px;
+            }
+            .pfive{
+                margin-top: 100px;
+            }
+            .pfive input{
+                margin-top: 10px;
+            }
+            .result{
+                margin-top: 10px;
+            }
+            .sub1{
+                display: none;
+            }
+            .sub2{
+                display: none;
+            }
+            .sub3{
+                display: none;
+            }
+            .sub4{
+                display: none;
+            }.sub5{
+                display: none;
+            }.sub6{
+                display: none;
+            }.sub7{
+                display: none;
+            }
+            .xyz{
+                display: block;
+            }
+            .sai{
+                color: orangered;
+                font-size: 19px;
+            }
+            .btn{
+                background-color: cyan;
+                border-radius: 5px;
+                size: 30px;
+            }
+            .btn:hover{
+                background-color: chartreuse;
+                box-shadow: 2px 2px 2px blue;
+            }
+            .lab1,.lab2,.lab3,.lab4{
+                display: none;
+            }
+            .xy{
+                display: block;
+            }
+            .crids{
+                background-color: rgba(0, 0, 0, 0.3);
+                width: 550px;
+                align-items: center;
+                text-align: center;
+                height: 130px;
+                margin-top: 50px;
+                border-radius: 10px;
+                box-shadow: 0 0 1px #333;
+            }
+            h1{
+                color: red;
+                font-size: 23px;
+            }
+            h2{
+                font-size: 20px;
+                color: orangered;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h2>A+ = 10</h2>
+        <h2>A = 9</h2>
+        <h2>B = 8</h2>
+        <h2>C = 7</h2>
+        <h2>D = 6</h2>
+        <h2>E = 5</h2>
+        <h2>F = 0</h2>
+        <center>
+            
+     <form name="formcal">
+      <div id="alll">  
+         <div class="crids">
+             <h1>SGP Calculator</h1>
+       <div>  enter how many 3 cridts sub : <input type="text" id="inp1" name="txt1"> </div>
+        <div> enter how many 1.5 cridts sub: <input type="text" id="inp2" name="txt2"> </div>
+         </div>
+        
+      </div>  
+        <div class="three"> 
+            <div id="sub1" class="sub1">  suject 1: <input type="text" name="txt3"> </div>
+            <div id="sub2" class="sub2"> suject 2: <input type="text" name="txt4"> </div>
+            <div id="sub3" class="sub3">  suject 3: <input type="text" name="txt5"> </div>
+            <div id="sub4" class="sub4"> suject 4: <input type="text" name="txt6" > </div>
+            <div id="sub5" class="sub5"> suject 5: <input type="text" name="txt7" > </div>
+            <div id="sub6" class="sub6"> suject 6: <input type="text" name="txt8"></div>
+            <div id="sub7" class="sub7"> suject 7: <input type="text" name="txt9"> </div>
+        </div>
+        <div class="pfive">
+            <div  id="lab1" class="lab1"> lab 1: <input type="text" name="txt10"> </div>
+            <div id="lab2" class="lab2"> lab 2: <input type="text" name="txt11"> </div>
+            <div id="lab3" class="lab3"> lab 3: <input type="text" name="txt12"> </div>
+            <div id="lab4" class="lab4"> lab 4: <input type="text" name="txt13"> </div>
+        </div>
+      result : <input type="text" name="res" class="result">
+      <input type="button" class="btn" onclick="sumval()" value="calculate" >
+     </form>
+        </center>
+        <p class="sai">copyright &copy; 2022 by sai krishna datt </p>
+
+        <script>
+            function sumval(){
+                var num1 = Number(document.formcal.txt1.value);
+                var num2 = Number(document.formcal.txt2.value);
+                var num3 = Number(document.formcal.txt3.value);
+                var num4 = Number(document.formcal.txt4.value);
+                var num5 = Number(document.formcal.txt5.value);
+                var num6 = Number(document.formcal.txt6.value);
+                var num7 = Number(document.formcal.txt7.value);
+                var num8 = Number(document.formcal.txt8.value);
+                var num9 = Number(document.formcal.txt9.value);
+                var num10 = Number(document.formcal.txt10.value);
+                var num11 = Number(document.formcal.txt11.value);
+                var num12 = Number(document.formcal.txt12.value);
+                var num13 = Number(document.formcal.txt13.value);
+                
+                
+                var res1 = num1*3;
+                var res2 = num2*1.5;
+                var res3 = num3+num4+num5+num6+num7+num8+num9;
+                var res4 = num10+num11+num12+num13;
+
+                var res5 = res3*3;
+                var res6 = res4*1.5;
+
+                var res7 = res5+res6;
+                var res8 = res1+res2;
+
+                var res9 = res7/res8;
+                document.formcal.res.value = res9; 
+            }
+            var inn = document.getElementById('inp1');
+            inn.addEventListener("keypress",function(event){
+                if (event.key === "3"){
+                    document.getElementById('sub1').classList.add("xyz");
+                    document.getElementById('sub2').classList.add("xyz");
+                    document.getElementById('sub3').classList.add("xyz");
+                    console.log("sai");
+     
+                }
+            });
+
+            var inn = document.getElementById('inp1');
+            inn.addEventListener("keypress",function(event){
+                if (event.key === "4"){
+                    document.getElementById('sub1').classList.add("xyz");
+                    document.getElementById('sub2').classList.add("xyz");
+                    document.getElementById('sub3').classList.add("xyz");
+                    document.getElementById('sub4').classList.add("xyz");
+                    console.log("krishna");     
+                }
+            });
+
+            var inn = document.getElementById('inp1');
+            inn.addEventListener("keypress",function(event){
+                if (event.key === "5"){
+                    document.getElementById('sub1').classList.add("xyz");
+                    document.getElementById('sub2').classList.add("xyz");
+                    document.getElementById('sub3').classList.add("xyz");
+                    document.getElementById('sub4').classList.add("xyz");
+                    document.getElementById('sub5').classList.add("xyz");
+                    console.log("datt");
+                }
+            });
+
+            var inn = document.getElementById('inp1');
+            inn.addEventListener("keypress",function(event){
+                if (event.key === "6"){
+                    console.log("hai");
+                    document.getElementById('sub1').classList.add("xyz");
+                    document.getElementById('sub2').classList.add("xyz");
+                    document.getElementById('sub3').classList.add("xyz");
+                    document.getElementById('sub4').classList.add("xyz");
+                    document.getElementById('sub5').classList.add("xyz");
+                    document.getElementById('sub6').classList.add("xyz");
+                }
+            });
+            var inn = document.getElementById('inp1');
+            inn.addEventListener("keypress",function(event){
+                if (event.key === "7"){
+                    console.log("hai");
+                    document.getElementById('sub1').classList.add("xyz");
+                    document.getElementById('sub2').classList.add("xyz");
+                    document.getElementById('sub3').classList.add("xyz");
+                    document.getElementById('sub4').classList.add("xyz");
+                    document.getElementById('sub5').classList.add("xyz");
+                    document.getElementById('sub6').classList.add("xyz");
+                    document.getElementById('sub7').classList.add("xyz");
+                }
+            });
+            var inn1 = document.getElementById('inp2');
+            inn1.addEventListener("keypress",function(event){
+                if (event.key === "1"){
+                    document.getElementById('lab1').classList.add("xy");
+                    console.log("krishna");     
+                }
+            });
+           
+            var inn1 = document.getElementById('inp2');
+            inn1.addEventListener("keypress",function(event){
+                if (event.key === "2"){
+                    document.getElementById('lab1').classList.add("xy");
+                    document.getElementById('lab2').classList.add("xy");
+                    console.log("krishna");     
+                }
+            });
+            var inn1 = document.getElementById('inp2');
+            inn1.addEventListener("keypress",function(event){
+                if (event.key === "3"){
+                    document.getElementById('lab1').classList.add("xy");
+                    document.getElementById('lab2').classList.add("xy");
+                    document.getElementById('lab3').classList.add("xy");
+                    console.log("krishna");     
+                }
+            });
+            var inn1 = document.getElementById('inp2');
+            inn1.addEventListener("keypress",function(event){
+                if (event.key === "4"){
+                    document.getElementById('lab1').classList.add("xy");
+                    document.getElementById('lab2').classList.add("xy");
+                    document.getElementById('lab3').classList.add("xy");
+                    document.getElementById('lab4').classList.add("xy");
+                    console.log("krishna");     
+                }
+            });
+           
+
+        </script>
+    </body>
+</html>
